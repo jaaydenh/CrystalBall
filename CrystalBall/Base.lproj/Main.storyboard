@@ -1,23 +1,79 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4451" systemVersion="13A461" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3676"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="CBViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fLF-40-jE4"/>
+                        <viewControllerLayoutGuide type="bottom" id="wJh-vZ-Tbm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CB00001" translatesAutoresizingMaskIntoConstraints="NO" id="Rw6-Yq-Aq2">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unable to answer right now" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="232" translatesAutoresizingMaskIntoConstraints="NO" id="nwz-sd-OCY">
+                                <rect key="frame" x="44" y="214" width="232" height="114"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="114" id="NxQ-sX-KZE"/>
+                                    <constraint firstAttribute="width" constant="232" id="mo7-Pf-wmq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="29"/>
+                                <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ED-YO-xLN">
+                                <rect key="frame" x="30" y="499" width="261" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="NR8-56-Zgr"/>
+                                    <constraint firstAttribute="width" constant="261" id="jd7-88-H56"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Predict" image="button-off">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="button-on"/>
+                                <connections>
+                                    <action selector="buttonPressed" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gTI-SU-RI7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wJh-vZ-Tbm" firstAttribute="top" secondItem="Rw6-Yq-Aq2" secondAttribute="bottom" id="0TJ-6d-QJN"/>
+                            <constraint firstItem="Rw6-Yq-Aq2" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4Y2-NO-y2p"/>
+                            <constraint firstItem="Rw6-Yq-Aq2" firstAttribute="centerY" secondItem="nwz-sd-OCY" secondAttribute="centerY" constant="13" id="A5U-Vo-YWb"/>
+                            <constraint firstAttribute="centerX" secondItem="3ED-YO-xLN" secondAttribute="centerX" id="ICD-V6-kBj"/>
+                            <constraint firstItem="wJh-vZ-Tbm" firstAttribute="top" secondItem="3ED-YO-xLN" secondAttribute="bottom" constant="20" id="MeX-6I-MOE"/>
+                            <constraint firstItem="Rw6-Yq-Aq2" firstAttribute="centerX" secondItem="nwz-sd-OCY" secondAttribute="centerX" id="kbY-B4-UTo"/>
+                            <constraint firstItem="Rw6-Yq-Aq2" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="oUz-r8-VXc"/>
+                            <constraint firstAttribute="trailing" secondItem="Rw6-Yq-Aq2" secondAttribute="trailing" id="wfj-fk-mh5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="Rw6-Yq-Aq2" id="F7h-uU-UBX"/>
+                        <outlet property="predictionLabel" destination="nwz-sd-OCY" id="r5a-vn-eD8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="CB00001" width="320" height="568"/>
+        <image name="button-off" width="261" height="49"/>
+        <image name="button-on" width="261" height="47"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

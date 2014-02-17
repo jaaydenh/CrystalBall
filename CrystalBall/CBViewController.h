@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class CBCrystalBall;
+
 @interface CBViewController : UIViewController
 
+@property (strong, nonatomic) CBCrystalBall *crystalBall;
+@property (weak, nonatomic) IBOutlet UILabel *predictionLabel;
+- (IBAction)buttonPressed;
+- (void) makePrediction;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @end
